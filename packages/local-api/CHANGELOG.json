@@ -2,6 +2,18 @@
   "name": "@scriptnote/local-api",
   "entries": [
     {
+      "version": "1.0.3",
+      "tag": "@scriptnote/local-api_v1.0.3",
+      "date": "Fri, 16 Apr 2021 17:31:45 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Update file extension to .json"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.2",
       "tag": "@scriptnote/local-api_v1.0.2",
       "date": "Fri, 16 Apr 2021 17:15:53 GMT",

@@ -9,13 +9,13 @@ export const serve = (
   directory: string,
   useProxy: boolean = false
 ) => {
-  const app = express();
+  const server = express();
 
-  app.use(express.json());
-  app.use(createCellsRouter(filename, directory));
+  server.use(express.json());
+  server.use(createCellsRouter(filename, directory));
 
   if (useProxy) {
-    app.use(
+    server.use(
       createProxyMiddleware({
         target: 'http://localhost:3000',
         ws: true,
@@ -26,10 +26,10 @@ export const serve = (
     const packagePath = require.resolve(
       '@scriptnote/local-client/build/index.html'
     );
-    app.use(express.static(dirname(packagePath)));
+    server.use(express.static(dirname(packagePath)));
   }
 
   return new Promise<void>((resolve, reject) => {
-    app.listen(port, resolve).on('error', reject);
+    server.listen(port, resolve).on('error', reject);
   });
 };
