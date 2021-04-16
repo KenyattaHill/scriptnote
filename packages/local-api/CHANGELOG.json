@@ -2,6 +2,23 @@
   "name": "@scriptnote/local-api",
   "entries": [
     {
+      "version": "1.0.4",
+      "tag": "@scriptnote/local-api_v1.0.4",
+      "date": "Fri, 16 Apr 2021 18:56:50 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Update package.json"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@scriptnote/local-client\" from `^1.0.2` to `^1.0.3`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.3",
       "tag": "@scriptnote/local-api_v1.0.3",
       "date": "Fri, 16 Apr 2021 17:31:45 GMT",
