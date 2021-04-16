@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Router } from 'express';
 import {readFile, writeFile} from 'fs/promises'
 import {join} from 'path'
 
@@ -8,7 +8,7 @@ interface Cell {
   type: 'code' | 'text';
 }
 
-export const createCellsRouter = (filename: string, dir: string) => {
+export const createCellsRouter = (filename: string, dir: string): Router => {
   const router = express.Router();
 
   const fullPath = join(dir, filename)
