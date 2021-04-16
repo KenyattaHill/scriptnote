@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core';
 import { ReactNode, useEffect, useState } from 'react';
 import { ResizableBox, ResizableBoxProps } from 'react-resizable';
-import clsx from 'clsx'
+import clsx from 'clsx';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -29,11 +29,9 @@ const useStyles = makeStyles(theme => ({
   },
   horizontal: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
-  vertical: {
-    
-  }
+  vertical: {},
 }));
 
 interface ResizableProps {
@@ -48,25 +46,25 @@ export default function Resizable({ direction, children }: ResizableProps) {
   const [innerHeight, setInnerHeight] = useState(window.innerHeight);
   const [width, setWidth] = useState(window.innerWidth * 0.65);
 
-useEffect(() => {
-  let timer: any
-  const listener = () => {
-    if(timer) clearTimeout(timer)
-    timer = setTimeout(() => {
-      setInnerWidth(window.innerWidth)
-      setInnerHeight(window.innerHeight)
-      if(window.innerWidth * 0.65 < width){
-        setWidth(window.innerWidth * 0.65)
-      }
-    }, 100)
-  }
+  useEffect(() => {
+    let timer: any;
+    const listener = () => {
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => {
+        setInnerWidth(window.innerWidth);
+        setInnerHeight(window.innerHeight);
+        if (window.innerWidth * 0.65 < width) {
+          setWidth(window.innerWidth * 0.65);
+        }
+      }, 100);
+    };
 
-  window.addEventListener('resize', listener)
+    window.addEventListener('resize', listener);
 
-  return () => {
-    window.removeEventListener('resize', listener)
-  }
-}, [width])
+    return () => {
+      window.removeEventListener('resize', listener);
+    };
+  }, [width]);
 
   const resizableProps: ResizableBoxProps =
     direction === 'horizontal'
@@ -78,8 +76,8 @@ useEffect(() => {
           height: Infinity,
           resizeHandles: ['e'],
           onResizeStop: (_, data) => {
-            setWidth(data.size.width)
-          }
+            setWidth(data.size.width);
+          },
         }
       : {
           minConstraints: [Infinity, 24],
@@ -89,9 +87,5 @@ useEffect(() => {
           height: 300,
           resizeHandles: ['s'],
         };
-  return (
-    <ResizableBox {...resizableProps}>
-      {children}
-    </ResizableBox>
-  );
+  return <ResizableBox {...resizableProps}>{children}</ResizableBox>;
 }

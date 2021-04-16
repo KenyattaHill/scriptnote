@@ -11,9 +11,6 @@ export default async function bundle(rawCode: string) {
     });
   }
 
-
-
-  
   try {
     const result = await service.build({
       entryPoints: ['index.js'],

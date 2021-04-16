@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     top: 5,
     left: 5,
     color: 'red',
-  }
+  },
 }));
 
 const iFrameHtml = `
@@ -74,7 +74,7 @@ export default function Preview({ code, bundleError }: PreviewProps) {
     iframe.current.srcdoc = iFrameHtml;
     setTimeout(() => {
       iframe.current.contentWindow.postMessage(code, '*');
-    }, 50)
+    }, 50);
   }, [code]);
   return (
     <div className={classes.root}>

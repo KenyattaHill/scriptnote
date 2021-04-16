@@ -7,13 +7,13 @@ import TextEditor from './text-editor';
 const useStyles = makeStyles(theme => ({
   item: {
     position: 'relative',
-    margin: '30px 10px'
+    margin: '30px 10px',
   },
   actionBarWrapper: {
     width: '100%',
     height: 50,
-    backgroundColor: '#37414b'
-  }
+    backgroundColor: '#37414b',
+  },
 }));
 
 interface CellListItemProps {
@@ -25,9 +25,9 @@ export default function CellListItem({ cell }: CellListItemProps) {
     <div className={classes.item}>
       {cell.type === 'code' ? (
         <>
-        <div className={classes.actionBarWrapper}>
-          <ActionBar id={cell.id} />
-        </div>
+          <div className={classes.actionBarWrapper}>
+            <ActionBar id={cell.id} />
+          </div>
           <CodeCell cell={cell} />
         </>
       ) : (

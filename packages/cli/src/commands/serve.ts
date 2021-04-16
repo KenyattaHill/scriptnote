@@ -9,7 +9,7 @@ export const serveCommand = new Command()
   .command('serve [filename]')
   .description('Open a file for editing')
   .option('-p, --port <number>', 'port to run server on', '4005')
-  .action(async (filename = 'notebook.js', { port }: { port: string }) => {
+  .action(async (filename = 'scripts.js', { port }: { port: string }) => {
     try {
       const dir = join(process.cwd(), dirname(filename));
       await serve(Number(port), basename(filename), dir, !isProduction);

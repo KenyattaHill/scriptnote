@@ -7,12 +7,12 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
     top: 0,
     right: 0,
-    opacity: .25,
+    opacity: 0.25,
     transition: 'opacity 0.3s',
-    '&:hover':{
-      opacity: .9
-    }
-  }
+    '&:hover': {
+      opacity: 0.9,
+    },
+  },
 }));
 
 interface ActionBarProps {

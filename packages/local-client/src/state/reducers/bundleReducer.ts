@@ -2,11 +2,13 @@ import produce from 'immer';
 import { ActionType } from '../action-types';
 import { Action } from '../actions';
 interface BundleState {
-  [key: string]: {
-    isBundling: boolean;
-    code: string;
-    error: string;
-  } | undefined;
+  [key: string]:
+    | {
+        isBundling: boolean;
+        code: string;
+        error: string;
+      }
+    | undefined;
 }
 const initialState: BundleState = {};
 

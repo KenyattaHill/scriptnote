@@ -12,61 +12,61 @@ const useJSXStyles = makeStyles(theme => ({
     '.JSXElement.JSXIdentifier': {
       color: 'lightcoral',
     },
-    
+
     '.JSXElement.JSXBracket': {
       color: 'grey',
     },
-    
+
     '.JSXElement.JSXText': {
       color: 'darkkhaki',
     },
-    
+
     '.JSXElement.JSXGlyph': {
       background: 'cyan',
       opacity: 0.25,
     },
-    
+
     '.JSXOpeningFragment.JSXBracket': {
       color: 'grey',
       fontWeight: 'bold',
     },
-    
+
     '.JSXClosingFragment.JSXBracket': {
       color: 'grey',
       fontWeight: 'bold',
     },
-    
+
     '.JSXOpeningElement.JSXBracket': {
       color: 'grey',
       fontWeight: 'bold',
     },
-    
+
     '.JSXOpeningElement.JSXIdentifier': {
       color: 'royalblue',
     },
-    
+
     '.JSXClosingElement.JSXBracket': {
       color: 'grey',
       fontWeight: 'lighter',
     },
-    
+
     '.JSXClosingElement.JSXIdentifier': {
       color: 'royalblue',
       fontWeight: 'lighter',
     },
-    
+
     '.JSXAttribute.JSXIdentifier': {
       color: 'steelblue',
     },
-    
+
     '.JSXExpressionContainer.JSXBracket': {
       color: 'grey',
     },
-    
+
     '.JSXSpreadChild.JSXBracket': {
       color: 'grey',
     },
-    
+
     '.JSXSpreadAttribute.JSXBracket': {
       color: 'grey',
     },
@@ -112,7 +112,7 @@ export default function CodeEditor({
     monacoEditor.onDidChangeModelContent(() => {
       onChange(getValue());
     });
-    
+
     monacoEditor.getModel()?.updateOptions({ tabSize: 2 });
     const highlighter = new Highlighter(
       (window as any).monaco,

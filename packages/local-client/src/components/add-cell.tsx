@@ -1,7 +1,7 @@
 import { useActions } from '../hooks';
 import { Button, makeStyles } from '@material-ui/core';
 import { Code, Comment } from '@material-ui/icons';
-import clsx  from 'clsx';
+import clsx from 'clsx';
 
 const useStyles = makeStyles(theme => ({
   addCell: {
@@ -38,7 +38,10 @@ interface AddCellProps {
   previousCellId: string | null;
   forceVisible?: boolean;
 }
-export default function AddCell({ previousCellId, forceVisible }: AddCellProps) {
+export default function AddCell({
+  previousCellId,
+  forceVisible,
+}: AddCellProps) {
   const classes = useStyles();
   const { insertCellAfter } = useActions();
   return (

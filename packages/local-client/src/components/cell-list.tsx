@@ -5,25 +5,23 @@ import AddCell from './add-cell';
 import CellListItem from './cell-list-item';
 const useStyles = makeStyles(theme => ({
   cellList: {
-    margin: '10px 25px'
+    margin: '10px 25px',
   },
-  '.react-draggable-transparent-selection &':{
-    marginBottom: '100vh'
-  }
-}))
-
-
+  '.react-draggable-transparent-selection &': {
+    marginBottom: '100vh',
+  },
+}));
 
 export default function CellList() {
-  const classes = useStyles()
+  const classes = useStyles();
   const cells = useTypedSelector(({ cells: { order, data } }) =>
     order.map(id => data[id])
   );
-  const {fetchCells} = useActions()
+  const { fetchCells } = useActions();
 
-  useEffect(()=>{
-    fetchCells()
-  }, [fetchCells])
+  useEffect(() => {
+    fetchCells();
+  }, [fetchCells]);
 
   const renderedCells = cells.map(cell => (
     <Fragment key={cell.id}>

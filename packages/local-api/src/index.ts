@@ -13,7 +13,7 @@ export const serve = (
 
   app.use(express.json());
   app.use(createCellsRouter(filename, directory));
-  
+
   if (useProxy) {
     app.use(
       createProxyMiddleware({
@@ -28,7 +28,6 @@ export const serve = (
     );
     app.use(express.static(dirname(packagePath)));
   }
-
 
   return new Promise<void>((resolve, reject) => {
     app.listen(port, resolve).on('error', reject);
