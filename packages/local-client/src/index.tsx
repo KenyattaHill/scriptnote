@@ -17,6 +17,8 @@ const theme = createMuiTheme({
   },
 });
 
+// TODO figure out how to process file into friendly Javascript
+
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <CssBaseline />
