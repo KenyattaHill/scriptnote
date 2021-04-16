@@ -35,6 +35,8 @@ const useStyles = makeStyles(theme => ({
 
 const iFrameHtml = `
     <html>
+
+    
       <head>
         <style>
           html {

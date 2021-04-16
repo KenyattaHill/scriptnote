@@ -1,6 +1,6 @@
 {
   "name": "scriptnote",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -8,17 +8,17 @@
   "bin": "dist/index.js",
   "scripts": {
     "start": "tsc --watch --preserveWatchOutput",
-    "build":"tsc",
-    "prepublishOnly": "esbuild src/index.ts --platform=node --outfile=dist/index.js --bundle --minify --define:process.env.NODE_ENV='production'"
+    "build":".\\node_modules\\esbuild\\esbuild.exe ./src/index.ts --platform=node --outfile=dist/index.js --bundle --minify --define:process.env.NODE_ENV='production'",
+    "prepublishOnly": "yarn build"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "@scriptnote/local-client": "^1.0.1"
+    "@scriptnote/local-client": "^1.0.2"
   },
   "devDependencies": {
-    "@scriptnote/local-api": "^1.0.1",
+    "@scriptnote/local-api": "^1.0.2",
     "@types/node": "^14.14.41",
     "commander": "^7.2.0",
     "esbuild": "0.8.26",
