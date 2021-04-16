@@ -1,6 +1,6 @@
 {
   "name": "scriptnote",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -14,10 +14,10 @@
     "dist"
   ],
   "dependencies": {
-    "@scriptnote/local-client": "^1.0.0"
+    "@scriptnote/local-client": "^1.0.1"
   },
   "devDependencies": {
-    "@scriptnote/local-api": "^1.0.0",
+    "@scriptnote/local-api": "^1.0.1",
     "@types/node": "^14.14.41",
     "commander": "^7.2.0",
     "esbuild": "0.8.26",
