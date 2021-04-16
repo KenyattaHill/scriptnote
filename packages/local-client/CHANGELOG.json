@@ -2,6 +2,18 @@
   "name": "@scriptnote/local-client",
   "entries": [
     {
+      "version": "1.0.3",
+      "tag": "@scriptnote/local-client_v1.0.3",
+      "date": "Fri, 16 Apr 2021 18:56:50 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Update package.json"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.2",
       "tag": "@scriptnote/local-client_v1.0.2",
       "date": "Fri, 16 Apr 2021 17:15:53 GMT",

@@ -10,7 +10,8 @@ export const serve = (
   useProxy: boolean = false
 ) => {
   const server = express();
-
+  // TODO add ability to share a file?
+  // TODO parse file to js
   server.use(express.json());
   server.use(createCellsRouter(filename, directory));
 
