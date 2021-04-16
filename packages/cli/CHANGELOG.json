@@ -1,0 +1,25 @@
+{
+  "name": "scriptnote",
+  "entries": [
+    {
+      "version": "1.0.3",
+      "tag": "scriptnote_v1.0.3",
+      "date": "Fri, 16 Apr 2021 17:15:53 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Test Change"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@scriptnote/local-client\" from `^1.0.1` to `^1.0.2`"
+          },
+          {
+            "comment": "Updating dependency \"@scriptnote/local-api\" from `^1.0.1` to `^1.0.2`"
+          }
+        ]
+      }
+    }
+  ]
+}
