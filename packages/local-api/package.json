@@ -9,6 +9,7 @@
   "license": "MIT",
   "scripts": {
     "start": "tsc --watch --preserveWatchOutput",
+    "build":"tsc",
     "prepublishOnly": "tsc"
   },
   "devDependencies": {
