@@ -1,5 +1,6 @@
 import { Button, makeStyles } from '@material-ui/core';
 import MonacoEditor, { EditorDidMount } from '@monaco-editor/react';
+// import {emmetJSX, emmetHTML} from 'emmet-monaco-es'
 import prettier from 'prettier';
 import parser from 'prettier/parser-babel';
 import { useRef } from 'react';
@@ -113,6 +114,8 @@ export default function CodeEditor({
       onChange(getValue());
     });
 
+    // emmetHTML((window as any).monaco);
+    // emmetJSX((window as any).monaco);
     monacoEditor.getModel()?.updateOptions({ tabSize: 2 });
     const highlighter = new Highlighter(
       (window as any).monaco,
