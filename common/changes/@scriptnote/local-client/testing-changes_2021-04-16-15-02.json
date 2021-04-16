@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@scriptnote/local-client",
+      "comment": "Test change",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@scriptnote/local-client",
+  "email": "kenyatta.dev@gmail.com"
+}
